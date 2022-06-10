@@ -1,6 +1,7 @@
 <template>
   <header>
     <nav class="header__wrapper">
+      <Burger />
       <Logo />
       <Navigation />
       <Authorization />
@@ -11,9 +12,10 @@
 import Navigation from "@/components/Header/Navigation";
 import Logo from "@/components/Header/Logo";
 import Authorization from "@/components/Header/buttons/Authorization";
+import Burger from "@/components/Header/Burger";
 
 export default {
-  components: { Navigation, Logo, Authorization },
+  components: { Navigation, Logo, Authorization, Burger },
 };
 </script>
 <style lang="scss">

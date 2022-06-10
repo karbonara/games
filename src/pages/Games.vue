@@ -1,12 +1,6 @@
 <template>
-  <div>
-    <RecommendationsItems />
-  </div>
+  <div></div>
 </template>
 <script>
-import RecommendationsItems from "@/components/ItemsProducts/RecommendationsItems";
-export default {
-  components: { RecommendationsItems },
-  components: {},
-};
+export default {};
 </script>

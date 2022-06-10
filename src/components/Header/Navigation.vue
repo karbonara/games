@@ -2,7 +2,7 @@
   <div class="navigation__main">
     <ul class="navigation">
       <li>
-        <RouterLink to="/game">Игры</RouterLink>
+        <RouterLink to="/games">Игры</RouterLink>
       </li>
       <li>
         <a href="/">Библиотека</a>
