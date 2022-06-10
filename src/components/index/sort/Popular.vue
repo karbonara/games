@@ -3,12 +3,48 @@
     <h2>Популярные категории</h2>
     <div class="popular__categories-items">
       <a href="/" v-for="item in items" :key="item">
-        <span>{{ item.img }}</span>
+        <span>
+          <!-- <img :src="item.img" alt="categories" /> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 172 172"
+            style="fill: #26e07f"
+          >
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#1fb141">
+                <path
+                  d="M21.5,21.5v129h64.5v-32.25v-64.5v-32.25zM86,53.75c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25c-17.7805,0 -32.25,14.4695 -32.25,32.25zM118.25,86c-17.7805,0 -32.25,14.4695 -32.25,32.25c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </span>
         <div>{{ item.title }}</div>
       </a>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -23,6 +59,7 @@ export default {
   },
 };
 </script>
+
 <style lang="scss">
 .popular__categories {
   position: relative;
@@ -53,6 +90,7 @@ export default {
     margin: 0 10px;
     padding: 10px 5px 20px;
     width: 240px;
+    text-decoration: none;
     min-height: 98px;
     font-size: 18px;
     line-height: 1.33;
@@ -61,20 +99,10 @@ export default {
     text-align: center;
     background-color: rgba(50, 50, 54, 0.9);
     border-radius: 8px;
-    -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     &:hover {
       background-color: hsla(0, 0%, 100%, 0.27);
@@ -83,14 +111,8 @@ export default {
       width: 42px;
       height: 42px;
       opacity: 0.8;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
       justify-content: center;
     }
     & div {

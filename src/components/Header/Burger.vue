@@ -1,18 +1,83 @@
 <template>
   <div class="burger">
     <input id="menu__toggle" type="checkbox" />
-    <label class="menu__btn" for="menu__toggle">
+    <label @click="modal" class="menu__btn" for="menu__toggle">
       <span></span>
     </label>
   </div>
+  <transition name="slide-fade">
+    <div v-if="show" class="burger__wrapper">
+      <div class="burger__wrapper-buttons">
+        <div class="burger__main-buttons">
+          <ButtonMobile>Регистрация</ButtonMobile>
+          <ButtonMobile
+            :style="{
+              backgroundColor: ['#454549'],
+              color: ['#ffffff'],
+            }"
+            >Вход</ButtonMobile
+          >
+        </div>
+      </div>
+      <div class="burger__content">
+        <ul class="burger__content-info-no-border">
+          <li>
+            <RouterLink to="/games">Игры</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/games">Игры</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/games">Игры</RouterLink>
+          </li>
+        </ul>
+        <ul class="burger__content-info-border">
+          <li>
+            <RouterLink to="/games">Контакты</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/games">О нас</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/games">Условия</RouterLink>
+          </li>
+        </ul>
+        <div class="burger__content-social">
+          <img src="" alt="vk logo" />
+        </div>
+      </div>
+    </div>
+  </transition>
 </template>
+
 <script>
-export default {};
+import ButtonMobile from "@/components/header/buttons/ButtonMobile";
+
+export default {
+  components: {
+    ButtonMobile,
+  },
+  data: function () {
+    return {
+      show: false,
+    };
+  },
+  methods: {
+    modal: function () {
+      this.show = !this.show;
+    },
+  },
+};
 </script>
+
 <style lang="scss" scoped>
 .burger {
   display: none;
   width: 52px;
+}
+.burger__wrapper {
+  display: none;
+  width: 100%;
 }
 /* скрываем чекбокс */
 #menu__toggle {
@@ -22,7 +87,7 @@ export default {};
 .menu__btn {
   display: flex; /* используем flex для центрирования содержимого */
   align-items: center; /* центрируем содержимое кнопки */
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   width: 26px;
@@ -64,8 +129,103 @@ export default {};
   left: 0;
 }
 @media (max-width: 690px) {
+  .slide-fade-enter-active {
+    transition: all 0.2s ease-out;
+  }
+
+  .slide-fade-leave-active {
+    transition: all 0.2s;
+  }
+
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
   .burger {
     display: block;
+  }
+  .burger__wrapper {
+    display: block;
+    position: absolute;
+    top: 72px;
+    left: 0;
+
+    z-index: 999;
+    & ul {
+      margin: 0;
+      list-style: none;
+      & li {
+        width: 100%;
+        padding: 8px 8px 8px 46px;
+        margin-bottom: 8px;
+        box-sizing: border-box;
+      }
+      & a {
+        display: flex;
+        padding: 8px;
+        font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
+  .burger__content-info-no-border {
+    padding: 0;
+  }
+  .burger__content {
+    margin-top: -6px;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(to top, #1e2125 0%, rgba(30, 33, 37, 0) 100%),
+      #000;
+  }
+  .burger__content-info-border {
+    padding: 24px 0 26px 0;
+    &::before {
+      content: "";
+      display: block;
+      margin: 11px auto;
+      width: calc(100% - 40px);
+      border-top: 1px solid #454549;
+    }
+    &::after {
+      content: "";
+      display: block;
+      margin: 11px auto;
+      width: calc(100% - 40px);
+      border-bottom: 1px solid #454549;
+    }
+  }
+  .burger__wrapper-buttons {
+    padding: 0px 0 18px 0;
+    background: #242429;
+  }
+  .burger__main-buttons {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.burger__content-social {
+  padding: 18px 0;
+  & img {
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 450px) {
+  .burger__main-buttons {
+    width: 90%;
+  }
+}
+@media (max-width: 356px) {
+  .burger__main-buttons {
+    width: 100%;
+    padding: 0 19px;
+    box-sizing: border-box;
   }
 }
 </style>

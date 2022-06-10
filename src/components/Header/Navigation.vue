@@ -10,15 +10,12 @@
       <li>
         <a href="/">Акции</a>
       </li>
-      <li>
-        <RouterLink to="/contacts">Контакты</RouterLink>
-      </li>
     </ul>
     <Search />
   </div>
 </template>
 <script>
-import Search from "@/components/Header/buttons/Search";
+import Search from "@/components/header/buttons/Search";
 export default {
   components: { Search },
 };

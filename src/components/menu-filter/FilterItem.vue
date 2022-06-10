@@ -12,15 +12,19 @@
     </div>
   </div>
 </template>
+
 <style lang="scss" scoped>
 .filter__container {
   margin-bottom: 20px;
+  background-color: rgba(245, 245, 247, 0.16);
+  width: 240px;
+  border-radius: 8px;
 }
 
 .filter__item {
   padding: 12px 12px 18px;
   & h2 {
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     font-size: 20px;
     line-height: normal;
     letter-spacing: 0.1px;
@@ -28,7 +32,7 @@
   }
 }
 .filter__item-checkbox {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   display: flex;
   width: 100%;
   & label {
@@ -36,14 +40,12 @@
     width: 100%;
     position: relative;
     & span {
-      margin-left: 8px;
+      margin-left: 18px;
     }
   }
 }
 .filter__item-input {
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   position: relative;
 }
 .filter__item-input-checkbox {
@@ -51,10 +53,32 @@
   height: 18px;
   position: absolute;
   margin-left: -7px;
+  left: -17px;
   background-color: transparent;
   border-radius: 3px;
   border-color: rgba(245, 245, 247, 0.3);
   border: 1px solid #c3c3c3;
   box-shadow: 0 2px 0 0 rgb(0 0 0 / 4%);
+  transition: 0.2s;
+}
+.filter__item-input:checked + .filter__item-input-checkbox {
+  background-color: rgb(158, 158, 158);
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 8px;
+    height: 3px;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    transform: rotate(135deg);
+  }
+}
+@media (max-width: 1008px) {
+  .filter__container {
+    display: none;
+  }
 }
 </style>

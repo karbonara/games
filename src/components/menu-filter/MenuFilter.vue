@@ -2,7 +2,7 @@
   <Filteritem />
 </template>
 <script>
-import Filteritem from "@/components/MenuFilter/FilterItem";
+import Filteritem from "@/components/menu-filter/FilterItem";
 export default {
   components: { Filteritem },
 };

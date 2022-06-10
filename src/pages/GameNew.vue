@@ -20,8 +20,8 @@
 </template>
 <script>
 import RecommendationsItems from "@/components/ItemsProducts/RecommendationsItems";
-import MenuFilter from "@/components/MenuFilter/MenuFilter";
-import FilterInput from "@/components/MenuFilter/FilterInput";
+import MenuFilter from "@/components/menu-filter/MenuFilter";
+import FilterInput from "@/components/menu-filter/FilterInput";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 export default {
   components: { RecommendationsItems, MenuFilter, FilterInput, Breadcrumbs },

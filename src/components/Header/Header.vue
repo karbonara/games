@@ -9,10 +9,10 @@
   </header>
 </template>
 <script>
-import Navigation from "@/components/Header/Navigation";
-import Logo from "@/components/Header/Logo";
-import Authorization from "@/components/Header/buttons/Authorization";
-import Burger from "@/components/Header/Burger";
+import Navigation from "@/components/header/Navigation";
+import Logo from "@/components/header/Logo";
+import Authorization from "@/components/header/buttons/Authorization";
+import Burger from "@/components/header/Burger";
 
 export default {
   components: { Navigation, Logo, Authorization, Burger },
@@ -30,6 +30,9 @@ header {
   align-items: center;
 }
 @media (max-width: 980px) {
+  header {
+    background: #242429;
+  }
   .header__wrapper {
     padding: 13px 0;
   }

@@ -15,6 +15,7 @@
     </div>
   </div>
 </template>
+
 <style lang="scss" scoped>
 .filter__sort {
   display: flex;

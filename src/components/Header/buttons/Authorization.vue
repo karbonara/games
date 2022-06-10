@@ -37,4 +37,9 @@ export default {};
   transition: opacity 0.1s;
   cursor: pointer;
 }
+@media (max-width: 490px) {
+  .user__login {
+    display: none;
+  }
+}
 </style>

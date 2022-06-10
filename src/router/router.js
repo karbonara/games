@@ -19,6 +19,11 @@ const router = createRouter({
             component: () => import('@/pages/Games')
         },
         {
+            path: '/game-page',
+            name: '/game-page',
+            component: () => import('@/pages/GamePage')
+        },
+        {
             path: '/agreement',
             name: '/agreement',
             component: () => import('@/pages/Agreement')

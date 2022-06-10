@@ -20,12 +20,15 @@
     <FilterSort />
   </div>
 </template>
+
 <script>
-import FilterSort from "@/components/MenuFilter/FilterSort";
+import FilterSort from "@/components/menu-filter/FilterSort";
+
 export default {
   components: { FilterSort },
 };
 </script>
+
 <style lang="scss" scoped>
 .filter__input {
   background-color: rgba(245, 245, 247, 0.16);

@@ -11,19 +11,19 @@
               height="145"
             />
           </div>
-          <div class="price">
-            <span>199Р</span>
+          <div class="product__info-special sale">
+            <span>-{{ item.sale }}%</span>
+          </div>
+          <div class="product__info-special price">
+            <span>{{ item.price }}₽</span>
           </div>
         </div>
         <div class="recommendations__info">
           <div class="recommendations__info-top">
-            <div class="recommendations__info-title">RAINBOWSIX SIEGE</div>
-            <div class="recommendations__info-genre">Шутер</div>
+            <div class="recommendations__info-title">{{ item.title }}</div>
+            <div class="recommendations__info-genre">{{ item.genre }}</div>
           </div>
-          <div class="recommendations__info-descr">
-            Экшн-шутер в жанре зомби-апокалипсиса и с элементами строительства
-            базы. Начните свой путь!
-          </div>
+          <div class="recommendations__info-descr">{{ item.description }}</div>
           <div class="recommendations__info-button">
             <a href="/game-page">Купить</a>
           </div>
@@ -37,7 +37,48 @@
 export default {
   data() {
     return {
-      items: [{ title: "MMORPG" }, { title: "MMORPG" }],
+      items: [
+        {
+          title: "RAINBOWSIX SIEGE",
+          sale: 80,
+          price: 7990,
+          genre: "Шутер",
+          description:
+            "Экшн-шутер в жанре зомби-апокалипсиса и с элементами строительства базы. Начните свой путь!",
+        },
+        {
+          title: "RAINBOWSIX SIEGE",
+          sale: 80,
+          price: 7990,
+          genre: "Шутер",
+          description:
+            "Экшн-шутер в жанре зомби-апокалипсиса и с элементами строительства базы. Начните свой путь!",
+        },
+        {
+          title: "RAINBOWSIX SIEGE",
+          sale: 80,
+          price: 7990,
+          genre: "Шутер",
+          description:
+            "Экшн-шутер в жанре зомби-апокалипсиса и с элементами строительства базы. Начните свой путь!",
+        },
+        {
+          title: "RAINBOWSIX SIEGE",
+          sale: 80,
+          price: 7990,
+          genre: "Шутер",
+          description:
+            "Экшн-шутер в жанре зомби-апокалипсиса и с элементами строительства базы. Начните свой путь!",
+        },
+        {
+          title: "RAINBOWSIX SIEGE",
+          sale: 80,
+          price: 7990,
+          genre: "Шутер",
+          description:
+            "Экшн-шутер в жанре зомби-апокалипсиса и с элементами строительства базы. Начните свой путь!",
+        },
+      ],
     };
   },
 };
@@ -166,18 +207,25 @@ export default {
   font-size: 13px;
   color: #979797;
 }
-.price {
+.product__info-special {
   position: absolute;
   top: 7px;
-  right: 7px;
-  background: #ffca4d;
-  padding: 4px 13px;
+  padding: 4px 11px;
   border-radius: 8px;
+  display: flex;
   & span {
-    font-size: 15px;
+    font-size: 13px;
     color: #000;
     font-weight: 500;
   }
+}
+.price {
+  right: 7px;
+  background: #ffca4d;
+}
+.sale {
+  left: 7px;
+  background: #77ff4d;
 }
 @media (max-width: 800px) {
   .recommendations__items {
@@ -187,7 +235,21 @@ export default {
     }
   }
 }
-@media (max-width: 455px) {
+@media (max-width: 698px) {
+  .recommendations__items {
+    & li {
+      width: calc(50vw - 138px);
+    }
+  }
+}
+@media (max-width: 657px) {
+  .recommendations__items {
+    & li {
+      width: 194px;
+    }
+  }
+}
+@media (max-width: 580px) {
   .recommendations__items {
     & li {
       width: calc(50vw - 28px);
@@ -217,10 +279,10 @@ export default {
   .recommendations__info-descr {
     padding-top: 28px;
   }
-  .price {
+  .product__info-special {
     padding: 3px 9px;
     & span {
-      font-size: 14px;
+      font-size: 11px;
     }
   }
 }

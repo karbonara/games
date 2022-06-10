@@ -66,22 +66,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   position: relative;
   width: 375px;
   padding: 30px 25px 30px 30px;
   margin-top: 20px;
-  background-color: #fff;
-  -webkit-box-sizing: border-box;
+  background-color: #333;
   box-sizing: border-box;
   border-radius: 6px;
-  -webkit-box-shadow: 0 2px 10px 0 rgb(0 0 0 / 6%);
   box-shadow: 0 2px 10px 0 rgb(0 0 0 / 6%);
   border: 1px solid rgba(62, 64, 77, 0.05);
 }
@@ -89,7 +82,7 @@
   margin-bottom: 13px;
   font-size: 18px;
   font-weight: 700;
-  color: #333;
+  color: #fff;
   line-height: 1.11;
 }
 .contacts__card-text {
@@ -101,7 +94,7 @@
 .contacts__card-mail {
   font-size: 18px;
   line-height: 1.11;
-  color: #005ff9;
+  color: #6a6a7b;
   text-decoration: none;
 }
 @media (max-width: 960px) {

@@ -3,6 +3,7 @@
     <div class="container__wrapper">
       <Selection />
       <div class="container_right">
+        <Popular />
         <div class="recommendations">
           <div class="recommendations__wrapper">
             <div class="recommendations__title">
@@ -11,7 +12,6 @@
             </div>
           </div>
         </div>
-        <Popular />
         <Recomendation />
         <Product />
       </div>
