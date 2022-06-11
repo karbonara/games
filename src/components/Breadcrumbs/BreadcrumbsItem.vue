@@ -4,7 +4,6 @@
   </RouterLink>
 </template>
 
-
 <script>
 export default {
   props: {

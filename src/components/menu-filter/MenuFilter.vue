@@ -1,9 +1,11 @@
 <template>
-  <Filteritem />
+  <FilterCheckBox />
 </template>
+
 <script>
-import Filteritem from "@/components/menu-filter/FilterItem";
+import FilterCheckBox from "@/components/menu-filter/FilterCheckBox";
+
 export default {
-  components: { Filteritem },
+  components: { FilterCheckBox },
 };
 </script>

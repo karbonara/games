@@ -2,16 +2,44 @@
   <div class="filter__container">
     <div class="filter__item">
       <h2>Тип</h2>
-      <div class="filter__item-checkbox">
-        <label>
-          <input class="filter__item-input" type="checkbox" />
-          <span class="filter__item-input-checkbox"></span>
-          <span>Мини-игры</span>
-        </label>
+      <div v-for="item in items" :key="item">
+        <div class="filter__item-checkbox">
+          <label>
+            <input class="filter__item-input" type="checkbox" />
+            <span class="filter__item-input-checkbox"></span>
+            <span>{{ item.input }}</span>
+          </label>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          input: "Мини игры",
+        },
+        {
+          input: "Новинки",
+        },
+        {
+          input: "Новинки",
+        },
+        {
+          input: "Популярные",
+        },
+        {
+          input: "Мини игры",
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .filter__container {
@@ -73,6 +101,20 @@
     height: 3px;
     border-right: 2px solid black;
     border-top: 2px solid black;
+    transform: rotate(135deg);
+  }
+}
+.filter__item-input + .filter__item-input-checkbox:hover {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 8px;
+    height: 3px;
+    border-right: 2px solid rgb(57, 57, 57);
+    border-top: 2px solid rgb(57, 57, 57);
     transform: rotate(135deg);
   }
 }

@@ -4,7 +4,7 @@
       <h3>Подборки игр</h3>
       <ul>
         <li v-for="item in items" :key="item">
-          <a href="/">{{ item.title }}</a>
+          <RouterLink to="/">{{ item.title }}</RouterLink>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -27,6 +27,15 @@
               src="https://store.my.games/pre_310x186_resize/hotbox/showcase/game/picture/76178575-669c-4d8a-8d65-374a58d96feb.jpeg?quality=85&format=webp"
               alt=""
             />
+            <p>
+              Warface — динамичный экшен в жанре MMOFPS с миллионами поклонников
+              по всему миру. В игре вас ждут отличная графика, увлекательные
+              PvP-бои и PvE-миссии, где вы можете испытать себя, играя 5
+              различными классами, и у каждого из них своя тактика ведения боя.
+              В PvE вам предстоит выполнять миссии в самых отдаленных уголках
+              планеты, а в PvP играть в тактических режимах и динамичных боях на
+              выживание.
+            </p>
           </div>
         </div>
       </div>
@@ -101,12 +110,21 @@
         <div class="game__item-container-right-info">
           <div class="game__item-container-box">
             <h2>Системные требования</h2>
+            <h4>Минимальные</h4>
+            <ul class="game__item-list-system">
+              <li>ОС: Windows XP</li>
+              <li>Процессор: Intel Core 2 Duo</li>
+              <li>Память: 2 ГБ</li>
+              <li>Место на диске: 500 М</li>
+              <li>Видеокарта: с 128 MB памяти</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <script>
 export default {
   data() {
@@ -116,6 +134,7 @@ export default {
   },
 };
 </script>
+
 <style lang="scss" scoped>
 .game__item {
   width: 90vw;
@@ -210,6 +229,9 @@ export default {
 }
 .game__item-previev {
   width: 100%;
+}
+.game__item-list-system {
+  padding: 0px 0px 0px 17px;
 }
 @media (max-width: 1204px) {
   .game__item-container-left {

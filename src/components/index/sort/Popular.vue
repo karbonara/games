@@ -2,9 +2,8 @@
   <div class="popular__categories">
     <h2>Популярные категории</h2>
     <div class="popular__categories-items">
-      <a href="/" v-for="item in items" :key="item">
+      <RouterLink to="/" v-for="item in items" :key="item">
         <span>
-          <!-- <img :src="item.img" alt="categories" /> -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -40,7 +39,7 @@
           </svg>
         </span>
         <div>{{ item.title }}</div>
-      </a>
+      </RouterLink>
     </div>
   </div>
 </template>

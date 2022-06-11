@@ -1,7 +1,7 @@
 <template>
   <div class="recommendations__items">
     <ul>
-      <li v-for="item in items" :key="item.title">
+      <li v-for="item in items" :key="item">
         <div>
           <div class="recommendations__picture">
             <img
@@ -25,16 +25,23 @@
           </div>
           <div class="recommendations__info-descr">{{ item.description }}</div>
           <div class="recommendations__info-button">
-            <a href="/game-page">Купить</a>
+            <RouterLink to="/game-page">Купить</RouterLink>
           </div>
         </div>
       </li>
     </ul>
+    <ButtonShowMore />
   </div>
 </template>
 
 <script>
+import ButtonShowMore from "@/components/buttons/ButtonShowMore";
+
 export default {
+  components: {
+    ButtonShowMore,
+  },
+
   data() {
     return {
       items: [

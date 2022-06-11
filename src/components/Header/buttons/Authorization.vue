@@ -25,6 +25,12 @@ export default {};
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: 0.2s;
+  padding: 6px;
+  border-radius: 8px;
+  &:hover {
+    background-color: rgba(50, 50, 54, 0.9);
+  }
 }
 .user__login {
   display: inline-block;

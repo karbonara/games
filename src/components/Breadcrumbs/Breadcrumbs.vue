@@ -2,16 +2,16 @@
   <div class="breadcrumbs">
     <ul>
       <li>
-        <BreadcrumbsItem link="/qwerty">STEAM GAME</BreadcrumbsItem>
+        <BreadcrumbsItem link="/">STEAM GAME</BreadcrumbsItem>
       </li>
       <li>
-        <BreadcrumbsItem link="/test">Популярные игры</BreadcrumbsItem>
+        <BreadcrumbsItem link="/">Популярные игры</BreadcrumbsItem>
       </li>
     </ul>
   </div>
 </template>
 <script>
-import BreadcrumbsItem from "@/components/Breadcrumbs/BreadcrumbsItem";
+import BreadcrumbsItem from "@/components/breadcrumbs/BreadcrumbsItem";
 export default {
   components: { BreadcrumbsItem },
 };

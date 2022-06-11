@@ -23,12 +23,18 @@ button {
   display: inline-block;
   vertical-align: middle;
   line-height: 21px;
-  padding: 8px 0;
   white-space: nowrap;
   cursor: pointer;
   background: none;
   border: none;
   outline: none;
-  -webkit-appearance: none;
+  transition: 0.2s;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  margin-right: 8px;
+  &:hover {
+    background-color: rgba(50, 50, 54, 0.9);
+  }
 }
 </style>

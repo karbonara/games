@@ -5,10 +5,10 @@
         <RouterLink to="/games">Игры</RouterLink>
       </li>
       <li>
-        <a href="/">Библиотека</a>
+        <RouterLink to="/games">Библиотека</RouterLink>
       </li>
       <li>
-        <a href="/">Акции</a>
+        <RouterLink to="/games">Акции</RouterLink>
       </li>
     </ul>
     <Search />
@@ -30,14 +30,33 @@ export default {
   display: flex;
   width: calc(100% - 46px);
   justify-content: start;
-  padding: 0;
+  padding: 0 0 0 24px;
   margin: 0;
   list-style: none;
+  & li {
+    padding: 0 18px;
+  }
   & a {
     text-decoration: none;
     color: #fff;
-    padding: 8px 12px;
+    padding: 8px 4px;
     font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+    &:hover {
+      transition: 0.3s;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 4px;
+        background-color: hsla(0, 0%, 100%, 0.8);
+        border-radius: 1.5px;
+        transition: opacity 0.1s;
+      }
+    }
   }
 }
 @media (max-width: 690px) {

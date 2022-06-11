@@ -1,7 +1,7 @@
 <template>
   <div class="recomendation">
     <div class="recomendation__wrapper">
-      <div class="recomendation__lists" v-for="item in items" :key="item.title">
+      <div class="recomendation__lists" v-for="item in items" :key="item">
         <div>
           {{ item.title }}
         </div>

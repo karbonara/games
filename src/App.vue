@@ -2,14 +2,16 @@
   <div>
     <Header />
     <RouterView />
+    <ButtonUp />
     <Footer />
   </div>
 </template>
 <script>
 import Header from "@/components/header/Header";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/footer/Footer";
+import ButtonUp from "@/components/buttons/ButtonUp";
 export default {
-  components: { Header, Footer },
+  components: { Header, Footer, ButtonUp },
 };
 </script>
 

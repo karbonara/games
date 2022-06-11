@@ -27,6 +27,11 @@ const router = createRouter({
             path: '/agreement',
             name: '/agreement',
             component: () => import('@/pages/Agreement')
+        },
+        {
+            path: '/privacy',
+            name: '/privacy',
+            component: () => import('@/pages/Privacy')
         }
     ]
 })

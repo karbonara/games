@@ -41,12 +41,12 @@
 .contacts {
   width: 90vw;
   margin: 0 auto;
+  padding-bottom: 56px;
   & h1 {
     margin-bottom: 20px;
     font-size: 40px;
     font-weight: 700;
     text-align: center;
-    // color: #333;
     color: #fff;
   }
 }
@@ -56,15 +56,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .contacts__card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -77,6 +72,10 @@
   border-radius: 6px;
   box-shadow: 0 2px 10px 0 rgb(0 0 0 / 6%);
   border: 1px solid rgba(62, 64, 77, 0.05);
+  transition: 0.2s;
+  &:hover {
+    background-color: rgba(50, 50, 54, 0.9);
+  }
 }
 .contacts__card-title {
   margin-bottom: 13px;

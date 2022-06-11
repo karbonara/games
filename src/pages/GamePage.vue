@@ -7,7 +7,7 @@
 
 <script>
 import GamePage from "@/components/game-page/GamePage";
-import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 
 export default {
   components: {

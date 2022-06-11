@@ -8,15 +8,21 @@
           <div class="recommendations__wrapper">
             <div class="recommendations__title">
               <h2>Рекомендуемое</h2>
-              <a href="/">Перейти в каталог</a>
+              <RouterLink to="/">Перейти в каталог</RouterLink>
             </div>
           </div>
         </div>
         <Recomendation />
         <Product />
+        <div class="recommendations">
+          <div class="recommendations__title">
+            <h2>Новинки</h2>
+            <RouterLink to="/">Перейти в каталог</RouterLink>
+          </div>
+          <Product />
+        </div>
       </div>
     </div>
-    <ButtonShowMore />
   </section>
 </template>
 
@@ -26,7 +32,6 @@ import Selection from "@/components/index/sort/Selection";
 import Product from "@/components/index/products/Product";
 import Recomendation from "@/components/index/sort/Recomendation";
 import Popular from "@/components/index/sort/Popular";
-import ButtonShowMore from "@/components/Buttons/ButtonShowMore";
 
 export default {
   components: {
@@ -34,7 +39,6 @@ export default {
     Selection,
     Product,
     Recomendation,
-    ButtonShowMore,
     Popular,
   },
 };
