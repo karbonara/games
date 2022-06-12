@@ -2,7 +2,6 @@
   <div>
     <Header />
     <RouterView />
-    <ButtonUp />
     <Footer />
   </div>
 </template>

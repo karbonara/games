@@ -2,7 +2,7 @@
   <section class="game__item">
     <div class="game__item-inner">
       <p>Pubg (PlayerUnknown's Battlegrounds)</p>
-      <a href="/">Купить</a>
+      <a href="/">Купить </a>
     </div>
     <div class="game__item-container">
       <div class="game__item-container-left">
@@ -37,6 +37,10 @@
               выживание.
             </p>
           </div>
+        </div>
+        <div class="slider__container">
+          <h2>Вам может понравиться</h2>
+          <!-- <SliderInPage /> -->
         </div>
       </div>
       <div class="game__item-container-right">
@@ -126,7 +130,12 @@
 </template>
 
 <script>
+import SliderInPage from "@/components/slider/SliderInPage";
+
 export default {
+  components: {
+    SliderInPage,
+  },
   data() {
     return {
       ImgItem: require("@/assets/imgs/game-page/Battlegrounds.jpg"),
@@ -157,16 +166,15 @@ export default {
   & a {
     font-size: 17px;
     font-weight: 500;
-    background-color: #616efb;
-    border-color: #616efb;
+    background-color: #ffca4d;
     text-decoration: none;
-    color: #ffffff;
+    color: #2f2f35;
     border-radius: 8px;
     padding: 11px 52px;
     transition: 0.2s;
+    position: relative;
     &:hover {
-      background: #5866ff;
-      border-color: #616efb;
+      opacity: 0.8;
     }
   }
 }
@@ -232,6 +240,13 @@ export default {
 }
 .game__item-list-system {
   padding: 0px 0px 0px 17px;
+}
+.slider__container {
+  padding: 34px 0;
+  & h2 {
+    color: #f5f5f7;
+    font-size: 18px;
+  }
 }
 @media (max-width: 1204px) {
   .game__item-container-left {

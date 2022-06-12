@@ -64,7 +64,7 @@ export default {
   position: relative;
   z-index: 5;
   margin-bottom: 60px;
-  max-width: 100%;
+  width: 100%;
   & h2 {
     position: relative;
     z-index: 1;
@@ -122,6 +122,16 @@ export default {
     }
   }
 }
+@media (max-width: 1122px) {
+  .popular__categories-items {
+    flex-wrap: wrap;
+    & a {
+      margin: 7px 8px;
+      padding: 10px 5px 20px;
+      width: 230px;
+    }
+  }
+}
 @media (max-width: 980px) {
   .popular__categories {
     & h2 {
@@ -131,7 +141,7 @@ export default {
   .popular__categories-items {
     flex-wrap: wrap;
     & a {
-      width: 192px;
+      width: 210px;
       margin: 18px 0;
       & div {
         font-size: 14px;
@@ -139,7 +149,17 @@ export default {
     }
   }
 }
+@media (max-width: 717px) {
+  .popular__categories-items {
+    & a {
+      width: 40%;
+    }
+  }
+}
 @media (max-width: 690px) {
+  .popular__categories-items {
+    margin: 0;
+  }
   .popular__categories {
     & h2 {
       font-size: 18px;

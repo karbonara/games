@@ -9,8 +9,8 @@
   font-weight: 500;
   line-height: normal;
   text-align: center;
-  width: 97%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 0;
   border-radius: 6px;
   cursor: pointer;
   -webkit-transition: all 0.1s;

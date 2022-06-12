@@ -16,25 +16,9 @@
   </div>
 </template>
 
+<script>
+import "./filterSort.scss";
+export default {};
+</script>
 <style lang="scss" scoped>
-.filter__sort {
-  display: flex;
-  align-items: baseline;
-  & div:first-child {
-    color: #f5f5f7;
-    opacity: 0.6;
-    margin: 0;
-    font-size: 15px;
-    line-height: 32px;
-  }
-  & select {
-    border: none;
-    background: inherit;
-    margin-right: 3px;
-    color: #f5f5f7;
-    opacity: 0.6;
-    outline: none;
-    cursor: pointer;
-  }
-}
 </style>

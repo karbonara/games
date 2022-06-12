@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import ButtonShowMore from "@/components/buttons/ButtonShowMore";
+import ButtonShowMore from "@/components/index/button/ButtonShowMore";
 
 export default {
   components: {
@@ -118,7 +118,7 @@ export default {
 }
 .recommendations__items {
   & ul {
-    margin: 0;
+    margin: 0 -10px;
     padding: 36px 0;
     display: flex;
     flex-wrap: wrap;
@@ -234,30 +234,28 @@ export default {
   left: 7px;
   background: #77ff4d;
 }
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
+  .games__wrapper {
+    width: 100%;
+    max-width: 472px;
+  }
   .recommendations__items {
+    & ul {
+      margin: 0 -3px;
+    }
     & li {
-      width: calc(32vw - 28px);
       margin: 0 3px 10px;
-    }
-  }
-}
-@media (max-width: 698px) {
-  .recommendations__items {
-    & li {
-      width: calc(50vw - 138px);
-    }
-  }
-}
-@media (max-width: 657px) {
-  .recommendations__items {
-    & li {
-      width: 194px;
+      max-width: 233px;
+      max-height: 233px;
+      width: calc(50vw - 18px);
     }
   }
 }
 @media (max-width: 580px) {
   .recommendations__items {
+    & ul {
+      margin: 0 -16px;
+    }
     & li {
       width: calc(50vw - 28px);
       margin: 0 3px 10px;
@@ -290,6 +288,18 @@ export default {
     padding: 3px 9px;
     & span {
       font-size: 11px;
+    }
+  }
+}
+@media (max-width: 540px) {
+  .recommendations__items {
+    & ul {
+      justify-content: center;
+    }
+    & li {
+      max-width: 233px;
+      max-height: 233px;
+      width: calc(50vw - 18px);
     }
   }
 }

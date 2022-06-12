@@ -35,4 +35,9 @@
     }
   }
 }
+@media (max-width: 820px) {
+  .button__up {
+    display: none;
+  }
+}
 </style>

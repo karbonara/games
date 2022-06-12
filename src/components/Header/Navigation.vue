@@ -2,13 +2,13 @@
   <div class="navigation__main">
     <ul class="navigation">
       <li>
-        <RouterLink to="/games">Игры</RouterLink>
+        <RouterLink to="/goods">Игры</RouterLink>
       </li>
       <li>
-        <RouterLink to="/games">Библиотека</RouterLink>
+        <RouterLink to="/goods">Библиотека</RouterLink>
       </li>
       <li>
-        <RouterLink to="/games">Акции</RouterLink>
+        <RouterLink to="/goods">Акции</RouterLink>
       </li>
     </ul>
     <Search />

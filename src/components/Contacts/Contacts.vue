@@ -37,6 +37,7 @@
     </div>
   </section>
 </template>
+
 <style lang="scss" scoped>
 .contacts {
   width: 90vw;

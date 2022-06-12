@@ -84,7 +84,7 @@ aside {
     }
   }
 }
-@media (max-width: 690px) {
+@media (max-width: 980px) {
   aside {
     display: none;
   }

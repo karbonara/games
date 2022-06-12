@@ -1,4 +1,5 @@
 <template>
+  <!-- <Slider /> -->
   <section class="container">
     <div class="container__wrapper">
       <Selection />
@@ -27,7 +28,7 @@
 </template>
 
 <script>
-import Slider from "@/components/Slider/Slider";
+import Slider from "@/components/slider/Slider";
 import Selection from "@/components/index/sort/Selection";
 import Product from "@/components/index/products/Product";
 import Recomendation from "@/components/index/sort/Recomendation";
@@ -45,7 +46,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
-  width: 90vw;
+  width: 1080px;
   margin: 0 auto;
 }
 .container__wrapper {
@@ -57,9 +58,27 @@ export default {
   width: 73%;
   margin: 0 auto;
 }
+@media (max-width: 1122px) {
+  .container {
+    width: 800px;
+  }
+  .container_right {
+    width: 500px;
+  }
+}
+@media (max-width: 980px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 585px) {
+  .container_right {
+    width: 97%;
+  }
+}
 @media (max-width: 455px) {
   .container_right {
-    width: 100%;
+    width: 95%;
   }
 }
 </style>
