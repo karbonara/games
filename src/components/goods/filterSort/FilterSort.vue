@@ -16,9 +16,6 @@
   </div>
 </template>
 
-<script>
-import "./filterSort.scss";
-export default {};
-</script>
 <style lang="scss" scoped>
+@import "./filterSort.scss";
 </style>
